@@ -31,8 +31,8 @@ _2nd_arguments=(
 
 local -a _toggle_mode
 _toggle_mode=(
-  'enable:'
-  'disable:'
+  'enable:enable offline mode'
+  'disable:disable offline mode'
 )
 
 local expl
