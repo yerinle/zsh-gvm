@@ -15,6 +15,7 @@ _1st_arguments=(
   'selfupdate:update the gvm'
   'broadcast:display the last broadcast message'
   'help:show the gvm help message'
+  'offline:enable or disable offline mode'
 )
 
 local -a _2nd_arguments
@@ -25,6 +26,13 @@ _2nd_arguments=(
   'gradle:build tool using groovy dsl'
   'lazybones:project creation tool that uses packaged project templates'
   'vertx:event driven application framework'
+  'groovyserv:run groovy as a server, reduces start-up time'
+)
+
+local -a _toggle_mode
+_toggle_mode=(
+  'enable:'
+  'disable:'
 )
 
 local expl
@@ -40,4 +48,8 @@ fi
 case "$words[1]" in
   install|uninstall|list|use|current|default)
     _describe -t commands "gvm subcommand" _2nd_arguments ;;
+  i|rm|ls|u|c|d)
+    _describe -t commands "gvm subcommand" _2nd_arguments ;;
+  offline)
+    _describe -t commands "gvm subcommand" _toggle_mode ;;
 esac
