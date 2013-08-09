@@ -27,6 +27,7 @@ _2nd_arguments=(
   'lazybones:project creation tool that uses packaged project templates'
   'vertx:event driven application framework'
   'groovyserv:run groovy as a server, reduces start-up time'
+  'springboot:create a spring application with minimum setup'
 )
 
 local -a _toggle_mode
